@@ -26,8 +26,8 @@ class Quizzer
       #{element.name}?"
     answer = gets.chomp.to_i
     
-    @@correct_answers += 1
     if answer == element.atomic_number
+      @@correct_answers += 1
       puts "Great job! You are correct. Your 
         current score is #{@@correct_answers} 
         out of #{@@total_questions}."
@@ -40,7 +40,8 @@ class Quizzer
     end
   end
  
-  def self.start_quiz                                 # "self.start_quiz" will start the quiz routine.
+  def self.start_quiz                               # "self.start_quiz" will start the quiz routine.
+    @@correct_answers = 0
     @@periodic_table.each do |element|
       self.quiz_element(element)
     end
