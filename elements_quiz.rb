@@ -26,7 +26,7 @@ class Quizzer
       #{element.name}?"
     answer = gets.chomp.to_i
     
-    @@correct_answers = 0
+    @@correct_answers += 1
     if answer == element.atomic_number
       puts "Great job! You are correct. Your 
         current score is #{@@correct_answers} 
